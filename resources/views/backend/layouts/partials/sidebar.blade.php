@@ -27,7 +27,7 @@
             </a>
         </li>
         <li>
-            <a href="{{route('question-upload.index')}}" class="side-menu">
+            <a href="{{route('all-questions')}}" class="side-menu">
                 <div class="side-menu__icon"><i data-feather="book-open"></i></div>
                 <div class="side-menu__title"> All Questions</div>
             </a>

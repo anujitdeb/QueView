@@ -23,9 +23,15 @@ Route::get('/dashboard_old', function () {
 })->middleware(['auth'])->name('dashboard_old');
 
 Route::group(['prefix' => 'dashboard'], function () {
+
+    // Dashboard Controllers
     Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
     Route::get('question-view{questionId}', [\App\Http\Controllers\DashboardController::class, 'questionView'])->name('question-view');
     Route::get('solution-view{questionId}', [\App\Http\Controllers\DashboardController::class, 'solutionView'])->name('solution-view');
+    Route::get('search', [\App\Http\Controllers\DashboardController::class, 'search'])->name('search');
+    Route::get('all-questions', [\App\Http\Controllers\DashboardController::class, 'allQuestion'])->name('all-questions');
+
+
     Route::resource('roles', 'App\Http\Controllers\RolesController', ['names' => 'dashboard.roles']);
     Route::resource('users', 'App\Http\Controllers\UsersController', ['names' => 'dashboard.users']);
     Route::resource('admins', 'App\Http\Controllers\AdminsController', ['names' => 'dashboard.admins']);

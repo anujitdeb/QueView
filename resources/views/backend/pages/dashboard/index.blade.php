@@ -8,7 +8,8 @@
 @section('admin-section')
 
     {{--Searchbox Start--}}
-    <form>
+    <form action="{{route('search')}}" method="get">
+        @csrf
         <div class="main"  style="padding-bottom: 30px">
             <!-- hero -->
             <div class="hero">
@@ -19,16 +20,16 @@
 
                         <div class=" bg-white rounded flex items-center w-full shadow-sm border border-gray-200">
                             <button @click="getImages()" class="p-3 outline-none focus:outline-none"><svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
-                            <input type="search" name="" id="" @keydown.enter="getImages()" placeholder="search for images" x-model="q" class="w-full pl-4 text-sm outline-none focus:outline-none bg-transparent" style="height: 40px">
-                            <div class="select">
-                                <select name="" id="" x-model="image_type" class="text-sm outline-none focus:outline-none bg-transparent">
+                            <input type="search" name="search" id="" @keydown.enter="getImages()" placeholder="Search for Questions..." x-model="q" class="w-full pl-4 text-sm outline-none focus:outline-none bg-transparent" style="height: 40px">
+                            {{--<div class="select">
+                                <select name="category" id="" x-model="image_type" class="text-sm outline-none focus:outline-none bg-transparent">
                                     <option value="all" selected>All</option>
                                     <option value="university">University</option>
                                     <option value="examName">Exam Name</option>
                                     <option value="courseTitle">Course Title</option>
                                     <option value="courseCode">Course Code</option>
                                 </select>
-                            </div>
+                            </div>--}}
                         </div>
 
                     </div>
