@@ -31,6 +31,9 @@ Route::group(['prefix' => 'dashboard'], function () {
     Route::get('search', [\App\Http\Controllers\DashboardController::class, 'search'])->name('search');
     Route::get('all-questions', [\App\Http\Controllers\DashboardController::class, 'allQuestion'])->name('all-questions');
 
+    // Admin Controllers
+    Route::get('question-request-view', [\App\Http\Controllers\AdminsController::class, 'questionRequestView'])->name('question-request-view');
+
 
     Route::resource('roles', 'App\Http\Controllers\RolesController', ['names' => 'dashboard.roles']);
     Route::resource('users', 'App\Http\Controllers\UsersController', ['names' => 'dashboard.users']);

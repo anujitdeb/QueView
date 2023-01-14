@@ -22,10 +22,10 @@
             <!-- BEGIN: Top Bar -->
             @include('backend.layouts.partials.topbar')
             <!-- END: Top Bar -->
-            
+
                 @yield('admin-section')
-            
-            
+
+
         </div>
         <!-- END: Content -->
     </div>
@@ -33,6 +33,7 @@
     <!-- BEGIN: JS Assets-->
     @include('backend.layouts.partials.scripts')
     <!-- END: JS Assets-->
+
 </body>
 
 </html>

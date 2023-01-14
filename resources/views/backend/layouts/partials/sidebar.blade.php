@@ -22,8 +22,14 @@
         </li>
         <li>
             <a href="{{route('question-upload.index')}}" class="side-menu">
-                <div class="side-menu__icon"><i data-feather="plus-circle"></i></div>
+                <div class="side-menu__icon"><i data-feather="upload"></i></div>
                 <div class="side-menu__title"> Upload Question</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{route('question-upload.index')}}" class="side-menu">
+                <div class="side-menu__icon"><i data-feather="minus-square"></i></div>
+                <div class="side-menu__title"> Upload Status</div>
             </a>
         </li>
         <li>
@@ -126,7 +132,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('dashboard') }}/users" class="side-menu">
+                        <a href="{{ route('question-request-view') }}" class="side-menu">
                             <div class="side-menu__icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"

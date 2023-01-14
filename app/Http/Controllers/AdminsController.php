@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\question;
 use Illuminate\Http\Request;
 
 use Spatie\Permission\Models\Role;
@@ -178,5 +179,11 @@ class AdminsController extends Controller
 
         session()->flash('success', 'Admin has been Deleted!!');
         return back();
+    }
+
+
+    public function questionRequestView(){
+        $questions = question::where('status', '0')->get();
+        return view('backend.pages.users.questionRequest', compact('questions'));
     }
 }

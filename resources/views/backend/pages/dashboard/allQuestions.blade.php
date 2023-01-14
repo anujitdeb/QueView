@@ -45,7 +45,7 @@
 
 
     {{--Question Card Start--}}
-    <h2 style=" padding-bottom: 10px"><span style="font-weight: bold; font-size: 1rem">Searched Questions :</span></h2>
+    <h2 style=" padding-bottom: 10px"><span style="font-weight: bold; font-size: 1rem">Questions :</span></h2>
 
     <div class="pt-0 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         @foreach($questions as $question)
