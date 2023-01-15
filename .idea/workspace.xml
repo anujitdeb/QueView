@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d4a8a4-0a0f-4354-827d-5debead95511" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/dashboard/uploadStatus.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/users/questionRequest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/partials/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/partials/scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/partials/styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/partials/styles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pages/dashboard/allQuestions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/pages/dashboard/allQuestions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pages/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/pages/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/pages/users/questionRequest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/pages/users/questionRequest.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +153,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/workzone/que-view/resources/views/backend/pages/dashboard",
+    "last_opened_file_path": "F:/workzone/que-view",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -211,7 +202,8 @@
       <workItem from="1673598152832" duration="464000" />
       <workItem from="1673601276496" duration="1273000" />
       <workItem from="1673606018570" duration="35598000" />
-      <workItem from="1673693501906" duration="15835000" />
+      <workItem from="1673693501906" duration="16164000" />
+      <workItem from="1673777074696" duration="802000" />
     </task>
     <servers />
   </component>

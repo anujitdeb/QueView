@@ -46,23 +46,44 @@
 
                         @foreach($questions as $question)
                             <tr>
+
+                                @php
+                                    $pdf = strpos($question->question_name, ".pdf");
+                                    $doc = strpos($question->question_name, ".doc");
+                                @endphp
+
                                 <td class="text-center px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                     <a href="{{route('question-view', $question->id)}}">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 w-10 h-10">
-                                                <img class="w-10 h-10 rounded-full" src="{{asset('/questions/' . $question->question_name)}}"
-                                                     alt="admin dashboard ui">
+                                                @if(!$pdf && !$doc)
+                                                    <img class="w-10 h-10 rounded-full" src="{{asset('/questions/' . $question->question_name)}}"
+                                                         alt="admin dashboard ui">
+                                                @else
+                                                    <img class="w-10 h-10 rounded-full" src="/test/question_thumbnail.jpg"
+                                                         alt="admin dashboard ui">
+                                                @endif
                                             </div>
                                         </div>
                                     </a>
                                 </td>
 
+                                @php
+                                    $solPdf = strpos($question->solution_name, ".pdf");
+                                    $solDoc = strpos($question->solution_name, ".doc");
+                                @endphp
+
                                 <td class="text-center px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                     <a href="{{route('solution-view', $question->id)}}">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 w-10 h-10">
-                                                <img class="w-10 h-10 rounded-full" src="{{asset('/solutions/' . $question->solution_name)}}"
-                                                     alt="admin dashboard ui">
+                                                @if(!$solPdf && !$solDoc)
+                                                    <img class="w-10 h-10 rounded-full" src="{{asset('/solutions/' . $question->solution_name)}}"
+                                                         alt="admin dashboard ui">
+                                                @else
+                                                    <img class="w-10 h-10 rounded-full" src="/test/question_thumbnail.jpg"
+                                                         alt="admin dashboard ui">
+                                                @endif
                                             </div>
                                         </div>
                                     </a>
