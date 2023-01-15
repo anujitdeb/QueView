@@ -153,7 +153,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/workzone/que-view",
+    "last_opened_file_path": "F:/workzone/que-view/resources/views/backend/pages/users",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -164,11 +164,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\workzone\que-view\resources\views\backend\pages\users" />
       <recent name="F:\workzone\que-view\resources\views\backend\pages\dashboard" />
       <recent name="F:\workzone\que-view\resources\views\backend\pages\admins" />
       <recent name="F:\workzone\que-view\public\test" />
       <recent name="F:\workzone\que-view\public\sliding_pictures" />
-      <recent name="F:\workzone\que-view\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\workzone\que-view\resources\views\backend\pages\users" />
@@ -203,7 +203,7 @@
       <workItem from="1673601276496" duration="1273000" />
       <workItem from="1673606018570" duration="35598000" />
       <workItem from="1673693501906" duration="16164000" />
-      <workItem from="1673777074696" duration="802000" />
+      <workItem from="1673777074696" duration="2514000" />
     </task>
     <servers />
   </component>
