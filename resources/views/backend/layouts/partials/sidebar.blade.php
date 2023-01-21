@@ -27,9 +27,16 @@
             </a>
         </li>
         <li>
-            <a href="{{route('question-upload.index')}}" class="side-menu">
+            <a href="{{route('question-upload-status')}}" class="side-menu">
                 <div class="side-menu__icon"><i data-feather="minus-square"></i></div>
                 <div class="side-menu__title"> Upload Status</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{route('my-uploads')}}" class="side-menu">
+                <div class="side-menu__icon"><i data-feather="list"></i></div>
+                <div class="side-menu__title"> My Uploads</div>
             </a>
         </li>
         <li>

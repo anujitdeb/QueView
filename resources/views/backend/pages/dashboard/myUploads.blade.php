@@ -21,8 +21,8 @@
                 <th class="border-b-2 text-center whitespace-no-wrap">Exam Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Course Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Course Title</th>
-                {{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
-                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>
+{{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
+                <th class="border-b-2 text-center whitespace-no-wrap">Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -79,13 +79,10 @@
                     </td>--}}
                     <td class="border-b w-5">
                         <div class="flex sm:justify-center items-center">
-                            @if($question->status == 1)
-                                <a class="flex items-center mr-3" href="" style="color: green; pointer-events: none"> <span class="px-3 py-2 rounded-full bg-theme-9 text-white mr-1"> Approved </span> </a>
-                            @elseif($question->status == 2)
-                                <a class="flex items-center mr-3" href="" style="color: red; pointer-events: none"><span class="px-3 py-2 rounded-full bg-theme-6 text-white mr-1"> Disapproved </span> </a>
-                            @else
-                                <a class="flex items-center mr-3" href="" style="color: blue; pointer-events: none"> <span class="px-3 py-2 rounded-full bg-theme-1 text-white mr-1"> Requested </span>  </a>
-                            @endif
+
+                            <a class="flex items-center mr-3" href="{{route('question-approval', $question->id)}}" style="color: blue;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                            <a class="flex items-center text-theme-6" href="{{route('question-disapproval', $question->id)}}"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+
                         </div>
                     </td>
                 </tr>

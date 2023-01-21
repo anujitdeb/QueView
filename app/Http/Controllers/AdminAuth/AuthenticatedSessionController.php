@@ -21,7 +21,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        return view('auth.admin-login');
     }
 
     /**
@@ -82,14 +82,6 @@ class AuthenticatedSessionController extends Controller
 
             Session::flash('login_success', 'Successfully Logged in!');
             return redirect()->intended(route('dashboard'));
-        }
-        elseif ($user && Hash::check($password, $user->password)){
-            session()->put('user', $user);
-            session()->put('type', 'user');
-//            Auth::login($user);
-
-            Session::flash('login_success', 'Successfully Logged in!');
-            return redirect(RouteServiceProvider::HOME);
         }
         else {
             Session::flash('error', 'Invalid Email or Passowrd!');

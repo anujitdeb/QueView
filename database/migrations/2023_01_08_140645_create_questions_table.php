@@ -16,6 +16,7 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('institution');
+            $table->string('user_id');
             $table->string('course_title');
             $table->string('course_code');
             $table->string('exam_name');

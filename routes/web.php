@@ -22,6 +22,9 @@ Route::get('/dashboard_old', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard_old');
 
+//Route::get('dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+//Route::get('queview', [\App\Http\Controllers\DashboardController::class, 'index'])->name('queview');
+
 Route::group(['prefix' => 'dashboard'], function () {
 
     // Dashboard Controllers
@@ -31,8 +34,13 @@ Route::group(['prefix' => 'dashboard'], function () {
     Route::get('search', [\App\Http\Controllers\DashboardController::class, 'search'])->name('search');
     Route::get('all-questions', [\App\Http\Controllers\DashboardController::class, 'allQuestion'])->name('all-questions');
 
+    //User Login
+    Route::post('user-login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'login'])->name('user-login');
+
     // Admin Controllers
     Route::get('question-request-view', [\App\Http\Controllers\AdminsController::class, 'questionRequestView'])->name('question-request-view');
+    Route::get('question-approval{id}', [\App\Http\Controllers\AdminsController::class, 'questionApproval'])->name('question-approval');
+    Route::get('question-disapproval{id}', [\App\Http\Controllers\AdminsController::class, 'questionDisapproval'])->name('question-disapproval');
 
 
     Route::resource('roles', 'App\Http\Controllers\RolesController', ['names' => 'dashboard.roles']);
@@ -49,6 +57,8 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
     Route::resource('question-upload', '\App\Http\Controllers\QuestionUploadController');
+    Route::get('question-upload-status', [\App\Http\Controllers\QuestionUploadController::class, 'questionStatusView'])->name('question-upload-status');
+    Route::get('my-uploads', [\App\Http\Controllers\QuestionUploadController::class, 'myUploads'])->name('my-uploads');
 });
 
 require __DIR__ . '/auth.php';

@@ -25,6 +25,7 @@ class QuestionUploadRequest extends FormRequest
     {
         return [
             'institution' => 'string|required',
+            'user_id' => 'string|required',
             'courseTitle' => 'string|required',
             'courseCode' => 'string|required',
             'examName' => 'string|required',

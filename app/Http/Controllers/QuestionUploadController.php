@@ -20,6 +20,25 @@ class QuestionUploadController extends Controller
     }
 
     /**
+    View the status of uploaded question
+    */
+    public function questionStatusView()
+    {
+        $questions = question::where('user_id', session('user.id'))->get();
+        return view('backend.pages.dashboard.uploadStatus', compact('questions'));
+    }
+
+    /**
+    View the status of uploaded question
+     */
+    public function myUploads()
+    {
+        $questions = question::where('user_id', session('user.id'))
+            ->where('status', '1')->get();
+        return view('backend.pages.dashboard.myUploads', compact('questions'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -53,6 +72,7 @@ class QuestionUploadController extends Controller
 
         question::create([
             'institution' => $request->institution,
+            'user_id' => $request->user_id,
             'course_title' => $request->courseTitle,
             'course_code' => $request->courseCode,
             'exam_name' => $request->examName,

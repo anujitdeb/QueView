@@ -10,6 +10,7 @@ class question extends Model
     use HasFactory;
     protected $fillable = [
         'institution',
+        'user_id',
         'course_title',
         'course_code',
         'exam_name',

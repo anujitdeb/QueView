@@ -8,6 +8,7 @@
 @section('admin-section')
 
     {{--Searchbox Start--}}
+
     <form action="{{route('search')}}" method="get">
         @csrf
         <div class="main"  style="padding-bottom: 30px">
@@ -130,7 +131,8 @@
     <div class="pt-0 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         @foreach($questions as $question)
             <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <div class="flex flex-col items-center pb-10"  style="padding-top: 30px">
+                <a href="#"> <i class="m-2" data-feather="bookmark" style="color: blue"></i> </a>
+                <div class="flex flex-col items-center pb-10">
 
                     @php
                         $pdf = strpos($question->question_name, ".pdf");

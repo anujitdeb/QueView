@@ -9,7 +9,7 @@
 @include('backend.layouts.partials.alerts')
 <div class="intro-y box mt-5">
     <div class="flex flex-col sm:flex-row items-center p-5 border-b border-gray-200">
-        <h2 class="font-medium text-base mr-auto">
+        <h2 class="font-medium text-base mr-auto" style="font-weight: bold">
             Upload your Question
         </h2>
     </div>
@@ -41,8 +41,11 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center">
-                    <label class="sm:w-15 sm:text-right sm:mr-5">Upload Solution <span class="font-thin"> (If any)</span></label>
+                    <label class="sm:w-15 sm:text-right sm:mr-5">Upload Solution <span class="font-thin" style="color: blue"> (If any)</span></label>
                     <input type="file" class="input w-full border mt-2 flex-1" name="solution">
+                </div>
+                <div class="hidden">
+                    <input type="" class="" name="user_id" value="{{session('user.id')}}" />
                 </div>
 
                 <div class="sm:ml-15 sm:pl-5 mt-5">

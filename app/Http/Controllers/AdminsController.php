@@ -183,7 +183,20 @@ class AdminsController extends Controller
 
 
     public function questionRequestView(){
-        $questions = question::where('status', '0')->get();
-        return view('backend.pages.users.questionRequest', compact('questions'));
+        $questions = question::all();
+        return view('backend.pages.admins.questionRequest', compact('questions'));
+    }
+
+    public function questionApproval($id){
+        $question = question::find($id);
+        $question->status = 1;
+        $question->save();
+        return redirect()->back();
+    }
+    public function questionDisapproval($id){
+        $question = question::find($id);
+        $question->status = 2;
+        $question->save();
+        return redirect()->back();
     }
 }

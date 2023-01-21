@@ -29,7 +29,7 @@ class DashboardController extends Controller
         else{
             $statData = [];
 
-            $questions = question::all()->take(12);
+            $questions = question::where('status', '1')->take(12)->get();
 
             //return $courses;
             return view('backend.pages.dashboard.index', compact('statData', 'questions'));
