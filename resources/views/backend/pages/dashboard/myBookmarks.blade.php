@@ -10,20 +10,21 @@
 
 
 
+
     <!-- BEGIN: Datatable -->
     <div class="intro-y datatable-wrapper box p-5 mt-5">
-        <h1 style="text-align: center; font-weight: bolder">Requested Questions</h1>
+        <h1 style="text-align: center; font-weight: bolder">My Bookmarks</h1>
         <table class="table table-report table-report--bordered display datatable w-full">
             <thead>
             <tr>
                 <th class="border-b-2 whitespace-no-wrap">Question</th>
                 <th class="border-b-2 whitespace-no-wrap">Solution</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Institution Name</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Course Name</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Requested time</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Updated time</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Exam Name</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Course Title</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Course Code</th>
 {{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
-                <th class="border-b-2 text-center whitespace-no-wrap">Actions</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">View</th>
             </tr>
             </thead>
             <tbody>
@@ -72,24 +73,16 @@
                         </a>
                     </td>
                     <td class="text-center border-b">{{$question->institution}}</td>
+                    <td class="text-center border-b">{{$question->exam_name}}</td>
                     <td class="text-center border-b">{{$question->course_title}}</td>
-                    <td class="text-center border-b">{{$question->created_at}}</td>
-                    <td class="text-center border-b">{{$question->updated_at}}</td>
+                    <td class="text-center border-b">{{$question->course_code}}</td>
                     {{--<td class="w-40 border-b">
                         <div class="flex items-center sm:justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
                     </td>--}}
                     <td class="border-b w-5">
                         <div class="flex sm:justify-center items-center">
-                            @if($question->status == 1)
-                                <a class="flex items-center mr-3" href="" style="color: green; pointer-events: none"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Approved </a>
-                                <a class="flex items-center text-theme-6" href="{{route('question-disapproval', $question->id)}}"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Unapprove </a>
-                            @elseif($question->status == 2)
-                                <a class="flex items-center mr-3" href="{{route('question-approval', $question->id)}}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Approve </a>
-                                <a class="flex items-center text-theme-6" href="" style="color: green; pointer-events: none"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Unapproved </a>
-                            @else
-                                <a class="flex items-center mr-3" href="{{route('question-approval', $question->id)}}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Approve </a>
-                                <a class="flex items-center text-theme-6" href="{{route('question-disapproval', $question->id)}}"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Unapprove </a>
-                            @endif
+                            <span style="padding-right: 5px"><a href="{{route('question-view', $question->id)}}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Question</a></span>
+                            <a href="{{route('solution-view', $question->id)}}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-green-700 border border-green-300 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:hover:border-green-700 dark:focus:ring-green-700">Solution</a>
                         </div>
                     </td>
                 </tr>

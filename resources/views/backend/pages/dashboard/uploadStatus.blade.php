@@ -12,6 +12,7 @@
 
     <!-- BEGIN: Datatable -->
     <div class="intro-y datatable-wrapper box p-5 mt-5">
+        <h1 style="text-align: center; font-weight: bolder">Upload Status</h1>
         <table class="table table-report table-report--bordered display datatable w-full">
             <thead>
             <tr>
@@ -19,8 +20,8 @@
                 <th class="border-b-2 whitespace-no-wrap">Solution</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Institution Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Exam Name</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Course Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Course Title</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Course Code</th>
                 {{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
                 <th class="border-b-2 text-center whitespace-no-wrap">Status</th>
             </tr>
@@ -82,7 +83,7 @@
                             @if($question->status == 1)
                                 <a class="flex items-center mr-3" href="" style="color: green; pointer-events: none"> <span class="px-3 py-2 rounded-full bg-theme-9 text-white mr-1"> Approved </span> </a>
                             @elseif($question->status == 2)
-                                <a class="flex items-center mr-3" href="" style="color: red; pointer-events: none"><span class="px-3 py-2 rounded-full bg-theme-6 text-white mr-1"> Disapproved </span> </a>
+                                <a class="flex items-center mr-3" href="" style="color: red; pointer-events: none"><span class="px-3 py-2 rounded-full bg-theme-6 text-white mr-1"> Unapproved </span> </a>
                             @else
                                 <a class="flex items-center mr-3" href="" style="color: blue; pointer-events: none"> <span class="px-3 py-2 rounded-full bg-theme-1 text-white mr-1"> Requested </span>  </a>
                             @endif

@@ -12,6 +12,7 @@
 
     <!-- BEGIN: Datatable -->
     <div class="intro-y datatable-wrapper box p-5 mt-5">
+        <h1 style="text-align: center; font-weight: bolder">My Uploads</h1>
         <table class="table table-report table-report--bordered display datatable w-full">
             <thead>
             <tr>
@@ -19,8 +20,8 @@
                 <th class="border-b-2 whitespace-no-wrap">Solution</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Institution Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Exam Name</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Course Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Course Title</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Course Code</th>
 {{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
                 <th class="border-b-2 text-center whitespace-no-wrap">Actions</th>
             </tr>

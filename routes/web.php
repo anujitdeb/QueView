@@ -56,9 +56,12 @@ Route::group(['prefix' => 'dashboard'], function () {
     // Route::post('/login/submit', 'App\Http\Controllers\Auth\LoginController@login')->name('dashboard.login.submit');
 
 
+    //User Controllers
     Route::resource('question-upload', '\App\Http\Controllers\QuestionUploadController');
     Route::get('question-upload-status', [\App\Http\Controllers\QuestionUploadController::class, 'questionStatusView'])->name('question-upload-status');
     Route::get('my-uploads', [\App\Http\Controllers\QuestionUploadController::class, 'myUploads'])->name('my-uploads');
+    Route::get('add-bookmark{question_id}', [\App\Http\Controllers\BookmarkController::class, 'addBookmark'])->name('add-bookmark');
+    Route::get('my-bookmark', [\App\Http\Controllers\BookmarkController::class, 'index'])->name('my-bookmark');
 });
 
 require __DIR__ . '/auth.php';

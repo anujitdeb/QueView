@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SearchRequest;
+use App\Models\Bookmark;
 use App\Models\question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

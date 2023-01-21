@@ -15,6 +15,8 @@ class CreateBookmarksTable extends Migration
     {
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->id();
+            $table->integer('question_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -131,7 +131,20 @@
     <div class="pt-0 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         @foreach($questions as $question)
             <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <a href="#"> <i class="m-2" data-feather="bookmark" style="color: blue"></i> </a>
+
+                @php
+
+                    $bookmark = \App\Models\Bookmark::where('user_id', session('user.id'))
+                    ->where('question_id', $question->id)->count();
+
+                @endphp
+
+                @if($bookmark)
+                    <a href="{{route('add-bookmark', $question->id)}}"> <i class="m-2" data-feather="bookmark" style="color: red"></i> </a>
+                @else
+                    <a href="{{route('add-bookmark', $question->id)}}"> <i class="m-2" data-feather="bookmark"></i> </a>
+                @endif
+
                 <div class="flex flex-col items-center pb-10">
 
                     @php
