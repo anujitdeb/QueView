@@ -18,10 +18,9 @@
             <tr>
                 <th class="border-b-2 whitespace-no-wrap">Question</th>
                 <th class="border-b-2 whitespace-no-wrap">Solution</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Institution Name</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Exam Name</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">Course Title</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">Course Code</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Requested Time</th>
+                <th class="border-b-2 text-center whitespace-no-wrap">Action Time</th>
                 {{--                <th class="border-b-2 text-center whitespace-no-wrap">Status</th>--}}
                 <th class="border-b-2 text-center whitespace-no-wrap">Status</th>
             </tr>
@@ -71,10 +70,9 @@
                             </div>
                         </a>
                     </td>
-                    <td class="text-center border-b">{{$question->institution}}</td>
-                    <td class="text-center border-b">{{$question->exam_name}}</td>
                     <td class="text-center border-b">{{$question->course_title}}</td>
-                    <td class="text-center border-b">{{$question->course_code}}</td>
+                    <td class="text-center border-b">{{$question->created_at}}</td>
+                    <td class="text-center border-b">{{$question->updated_at}}</td>
                     {{--<td class="w-40 border-b">
                         <div class="flex items-center sm:justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
                     </td>--}}
