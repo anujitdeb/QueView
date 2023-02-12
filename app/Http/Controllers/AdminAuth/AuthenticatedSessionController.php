@@ -4,12 +4,9 @@ namespace App\Http\Controllers\AdminAuth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Models\Admin;
-use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Session;
 
 class AuthenticatedSessionController extends Controller
@@ -21,7 +18,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.admin-login');
+        return view('auth.login');
     }
 
     /**
@@ -65,25 +62,18 @@ class AuthenticatedSessionController extends Controller
     // Admin Login
     public function login(Request $request)
     {
+//        dd($request->all());
         //Validate Login Form Data
         $request->validate([
             'email' => 'required|email|',
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $request->email)->first();
-        $password = $request->password;
-
         //Try Logging in
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            $user = Admin::where('email', $request->email)->first();
-            session()->put('user', $user);
-            session()->put('type', 'admin');
-
             Session::flash('login_success', 'Successfully Logged in!');
             return redirect()->intended(route('dashboard'));
-        }
-        else {
+        } else {
             Session::flash('error', 'Invalid Email or Passowrd!');
             return back();
         }
