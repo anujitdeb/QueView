@@ -23,6 +23,7 @@ class DashboardController extends Controller
 
     public function index()
     {
+
         //print_r(gettype($this->user));
         if($this->user == null){
             return view("backend.auth.login");

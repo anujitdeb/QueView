@@ -47,8 +47,9 @@ Route::group(['prefix' => 'dashboard'], function () {
     Route::resource('users', 'App\Http\Controllers\UsersController', ['names' => 'dashboard.users']);
     Route::resource('admins', 'App\Http\Controllers\AdminsController', ['names' => 'dashboard.admins']);
 
-    Route::get('/login', 'App\Http\Controllers\AdminAuth\AuthenticatedSessionController@showLoginForm')->name('dashboard.login');
+    Route::get('/login', 'App\Http\Controllers\AdminAuth\AuthenticatedSessionController@showLoginForm')->name('login');
     Route::post('/login/submit', 'App\Http\Controllers\AdminAuth\AuthenticatedSessionController@login')->name('dashboard.login.submit');
+   //Route::post('/login/submit',function (){return 'boo';})->name('dashboard.login.submit');
 
     Route::post('/logout/submit', 'App\Http\Controllers\AdminAuth\AuthenticatedSessionController@logout')->name('dashboard.logout.submit');
 
